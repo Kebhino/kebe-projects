@@ -10,15 +10,17 @@ const GridList = () => {
           description=" Gra przeglądarkowa napisana w React i TypeScript. Gra polega na
                     zbieraniu jabłek i unikaniu przeszkód. Gra kończy się, gdy wąż
                     uderzy w siebie"
-          url="https://snakegame-assets.s3.eu-north-1.amazonaws.com/snakeimg.png"
+          urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/snakeimg.png"
           git="https://github.com/Kebhino/snake-game"
+          urlSite="https://snake.kebeprojects.com	"
         />
       </GridItem>
       <GridItem>
         <ProjectCard
           title="Game-Hub - React TS"
           description=" A dynamic web app built with React, TypeScript, and Chakra UI that allows users to browse video games fetched from the RAWG Video Games Database API."
-          url="https://snakegame-assets.s3.eu-north-1.amazonaws.com/gamehub.webp"
+          urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/gamehub.webp"
+          urlSite="https://gamehub.kebeprojects.com"
           git="https://github.com/Kebhino/game-hub"
         />
       </GridItem>
@@ -27,7 +29,8 @@ const GridList = () => {
           title="Certificates
 "
           description=" Here you'll find the most important courses I’ve completed, grouped by topic and with direct access to each certificate."
-          url="https://snakegame-assets.s3.eu-north-1.amazonaws.com/certificate_card.webp"
+          urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/certificate_card.webp"
+          urlSite="https://github.com/Kebhino/Certificates"
           git="https://github.com/Kebhino/Certificates"
         />
       </GridItem>

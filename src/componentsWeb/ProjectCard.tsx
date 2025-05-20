@@ -15,20 +15,38 @@ import { FaGithub } from "react-icons/fa";
 interface ProjectCardProps {
   title: string;
   description: string;
-  url: string;
+  urlImage: string;
   git?: string;
+  urlSite: string;
 }
 
-const ProjectCard = ({ title, description, url, git }: ProjectCardProps) => {
+const ProjectCard = ({
+  title,
+  description,
+  urlImage,
+  urlSite,
+  git,
+}: ProjectCardProps) => {
   return (
     <Box
       transition="all 0.3s ease"
-      _hover={{ boxShadow: "xl", transform: "scale(1.01)" }}
+      borderRadius="3xl"
+      _hover={{
+        boxShadow: "0 0 2px 1px  rgb(130, 130, 130)",
+        transform: "scale(1.01)",
+        transition: "all 0.1s ease",
+      }}
     >
-      <Card.Root borderRadius={"lg"} boxShadow="md" overflow="hidden">
-        {/* Card Header with Image */}
+      <Card.Root
+        borderRadius={"3xl"}
+        boxShadow="xl"
+        colorPalette={"red"}
+        overflow="hidden"
+        height={600}
+        size={"lg"}
+      >
         <Card.Header>
-          <Image src={url} alt="Snake Image" borderRadius="lg" />
+          <Image src={urlImage} alt={title} borderRadius="3xl" />
         </Card.Header>
         <Card.Body>
           <HStack
@@ -62,6 +80,7 @@ const ProjectCard = ({ title, description, url, git }: ProjectCardProps) => {
         </Card.Body>
         <Card.Footer justifyContent={"space-between"}>
           <Button
+            borderRadius={"xl"}
             asChild
             colorPalette="teal"
             variant="solid"
@@ -69,7 +88,7 @@ const ProjectCard = ({ title, description, url, git }: ProjectCardProps) => {
             _hover={{ transform: "scale(1.1)" }}
             transition="all 0.4s ease"
           >
-            <a href="https://master.d34pw4ymgqrj1v.amplifyapp.com/">Zobacz</a>
+            <a href={urlSite}>Zobacz</a>
           </Button>
           <Spacer />
 
