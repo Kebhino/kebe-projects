@@ -12,7 +12,14 @@ import { FaReact } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 
-const ProjectCard = () => {
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  url: string;
+  git?: string;
+}
+
+const ProjectCard = ({ title, description, url, git }: ProjectCardProps) => {
   return (
     <Box
       transition="all 0.3s ease"
@@ -21,11 +28,7 @@ const ProjectCard = () => {
       <Card.Root borderRadius={"lg"} boxShadow="md" overflow="hidden">
         {/* Card Header with Image */}
         <Card.Header>
-          <Image
-            src="https://snakegame-assets.s3.eu-north-1.amazonaws.com/snakeimg.png"
-            alt="Snake Image"
-            borderRadius="lg"
-          />
+          <Image src={url} alt="Snake Image" borderRadius="lg" />
         </Card.Header>
         <Card.Body>
           <HStack
@@ -40,7 +43,7 @@ const ProjectCard = () => {
               textAlign={"center"}
               marginBottom={2}
             >
-              Snake Game - React TS
+              {title}
             </Text>
             <Spacer />
             <Icon as={FaReact} color="#61DAFB" boxSize={5} />
@@ -54,9 +57,7 @@ const ProjectCard = () => {
           </HStack>
 
           <Text fontSize="sm" color="gray.500">
-            Gra przeglądarkowa napisana w React i TypeScript. Gra polega na
-            zbieraniu jabłek i unikaniu przeszkód. Gra kończy się, gdy wąż
-            uderzy w siebie
+            {description}
           </Text>
         </Card.Body>
         <Card.Footer justifyContent={"space-between"}>
@@ -74,7 +75,7 @@ const ProjectCard = () => {
 
           <Icon
             as={"a"}
-            href="https://github.com/Kebhino/snake-game"
+            href={git}
             _hover={{ transform: "scale(1.1)" }}
             transition="all 0.2s ease"
           >
