@@ -5,6 +5,7 @@ import {
   HStack,
   Icon,
   Image,
+  Menu,
   Spacer,
   Text,
 } from "@chakra-ui/react";
@@ -18,6 +19,7 @@ interface ProjectCardProps {
   urlImage: string;
   git?: string;
   urlSite: string;
+  id?: string;
 }
 
 const ProjectCard = ({
@@ -26,6 +28,7 @@ const ProjectCard = ({
   urlImage,
   urlSite,
   git,
+  id,
 }: ProjectCardProps) => {
   return (
     <Box
@@ -41,7 +44,6 @@ const ProjectCard = ({
         borderRadius={"3xl"}
         boxShadow="xl"
         colorPalette={"red"}
-        overflow="hidden"
         height={600}
         size={"lg"}
       >
@@ -78,18 +80,63 @@ const ProjectCard = ({
             {description}
           </Text>
         </Card.Body>
-        <Card.Footer justifyContent={"space-between"}>
-          <Button
-            borderRadius={"xl"}
-            asChild
-            colorPalette="teal"
-            variant="solid"
-            justifyContent={"center"}
-            _hover={{ transform: "scale(1.1)" }}
-            transition="all 0.4s ease"
-          >
-            <a href={urlSite}>Zobacz</a>
-          </Button>
+        <Card.Footer
+          justifyContent={"space-between"}
+          position="relative"
+          overflow="visible"
+        >
+          {id === "certificates" ? (
+            <Menu.Root>
+              <Menu.Trigger asChild>
+                <Button borderRadius="xl" colorPalette="teal" variant="solid">
+                  Certyfikaty
+                </Button>
+              </Menu.Trigger>
+              <Menu.Content
+                minWidth="150px"
+                style={{
+                  position: "absolute",
+                  top: "10%",
+                  right: 80,
+                }}
+              >
+                <Menu.Item
+                  asChild
+                  value="1"
+                  zIndex="popover" // albo "dropdown" lub konkretnie np. 1000
+                  style={{ overflow: "visible" }}
+                >
+                  <a href="https://kurs-html.com" target="_blank">
+                    HTML
+                  </a>
+                </Menu.Item>
+                <Menu.Item asChild value="2">
+                  <a href="https://kurs-css.com" target="_blank">
+                    CSS
+                  </a>
+                </Menu.Item>
+                <Menu.Item asChild value="3">
+                  <a href="https://kurs-react.com" target="_blank">
+                    React
+                  </a>
+                </Menu.Item>
+              </Menu.Content>
+            </Menu.Root>
+          ) : (
+            <Button
+              id={id}
+              borderRadius="xl"
+              asChild
+              colorPalette="teal"
+              variant="solid"
+              justifyContent="center"
+              _hover={{ transform: "scale(1.1)" }}
+              transition="all 0.4s ease"
+            >
+              <a href={urlSite}>Zobacz</a>
+            </Button>
+          )}
+
           <Spacer />
 
           <Icon

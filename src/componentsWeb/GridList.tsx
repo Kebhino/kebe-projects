@@ -26,8 +26,8 @@ const GridList = () => {
       </GridItem>
       <GridItem>
         <ProjectCard
-          title="Certificates
-"
+          title="Certificates"
+          id="certificates"
           description=" Here you'll find the most important courses I’ve completed, grouped by topic and with direct access to each certificate."
           urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/certificate_card.webp"
           urlSite="https://github.com/Kebhino/Certificates"
