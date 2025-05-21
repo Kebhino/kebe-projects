@@ -14,7 +14,7 @@ const GridList = () => {
           description=" Gra przeglądarkowa napisana w React i TypeScript. Gra polega na
                     zbieraniu jabłek i unikaniu przeszkód. Gra kończy się, gdy wąż
                     uderzy w siebie"
-          urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/snakeimg.png"
+          urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/snakeimg_optimized.webp"
           git="https://github.com/Kebhino/snake-game"
           urlSite="https://snake.kebeprojects.com	"
         />
