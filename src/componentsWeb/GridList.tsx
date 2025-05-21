@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 const GridList = () => {
   return (
     <Grid
-      templateColumns={{ base: "1fr", lg: "repeat(3, 1fr)" }}
+      templateColumns={{ base: "1fr", md: "1fr", lg: "repeat(3, 1fr)" }}
       gap={6}
       padding={4}
     >
@@ -32,7 +32,7 @@ const GridList = () => {
         <ProjectCard
           title="Certificates"
           id="certificates"
-          description=" Here you'll find the most important courses I’ve completed, grouped by topic and with direct access to each certificate."
+          description=" Here you'll find the most important courses I’ve completed, grouped by topic and with direct access to each certificate. You can also download them in PDF format."
           urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/certificate_card.webp"
           urlSite="https://github.com/Kebhino/Certificates"
           git="https://github.com/Kebhino/Certificates"

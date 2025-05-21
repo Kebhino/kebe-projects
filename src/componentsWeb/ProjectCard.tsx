@@ -45,7 +45,6 @@ const ProjectCard = ({
         borderRadius={"3xl"}
         boxShadow="xl"
         colorPalette={"red"}
-        height={600}
         size={"lg"}
       >
         <Card.Header>
