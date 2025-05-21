@@ -10,7 +10,8 @@ const ColorModeSwitch = () => {
         onClick={toggleColorMode}
         variant="outline"
         size="sm"
-        marginRight={3}
+        marginRight={4}
+        borderRadius={"xl"}
       >
         {colorMode === "light" ? <LuSun /> : <LuMoon />}
       </IconButton>
