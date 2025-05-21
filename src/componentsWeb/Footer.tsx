@@ -10,7 +10,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <Box mt={10} borderRadius={"3xl"}>
+    <Box borderRadius={"3xl"} mt="25vh">
       <Container maxW="container.lg">
         <Stack
           direction={{ base: "column", md: "row" }}

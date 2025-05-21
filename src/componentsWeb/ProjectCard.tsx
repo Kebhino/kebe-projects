@@ -12,6 +12,7 @@ import {
 import { FaReact } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
+import { CertificatesList } from "./certyfikaty";
 
 interface ProjectCardProps {
   title: string;
@@ -93,33 +94,30 @@ const ProjectCard = ({
                 </Button>
               </Menu.Trigger>
               <Menu.Content
-                minWidth="150px"
+                minWidth="200px"
+                zIndex={9999}
                 style={{
                   position: "absolute",
-                  top: "10%",
-                  right: 80,
+                  top: "100%",
+                  right: 0,
+                  marginTop: "8px", // ładny odstęp od przycisku
+                  borderRadius: "8px",
+                  boxShadow: "md",
+                  padding: "4px 0",
                 }}
               >
-                <Menu.Item
-                  asChild
-                  value="1"
-                  zIndex="popover" // albo "dropdown" lub konkretnie np. 1000
-                  style={{ overflow: "visible" }}
-                >
-                  <a href="https://kurs-html.com" target="_blank">
-                    HTML
-                  </a>
-                </Menu.Item>
-                <Menu.Item asChild value="2">
-                  <a href="https://kurs-css.com" target="_blank">
-                    CSS
-                  </a>
-                </Menu.Item>
-                <Menu.Item asChild value="3">
-                  <a href="https://kurs-react.com" target="_blank">
-                    React
-                  </a>
-                </Menu.Item>
+                {CertificatesList.map((certyfikat) => (
+                  <Menu.Item
+                    asChild
+                    value={certyfikat.name}
+                    zIndex="popover"
+                    style={{ overflow: "visible" }}
+                  >
+                    <a href={certyfikat.url} target="_blank">
+                      {certyfikat.name}
+                    </a>
+                  </Menu.Item>
+                ))}
               </Menu.Content>
             </Menu.Root>
           ) : (
