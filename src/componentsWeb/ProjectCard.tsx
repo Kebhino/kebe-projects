@@ -5,6 +5,7 @@ import {
   HStack,
   Icon,
   Image,
+  Link,
   Menu,
   Spacer,
   Text,
@@ -48,7 +49,9 @@ const ProjectCard = ({
         size={"lg"}
       >
         <Card.Header>
-          <Image src={urlImage} alt={title} borderRadius="3xl" />
+          <Link href={urlSite} target="_blank" focusRing={"none"}>
+            <Image src={urlImage} alt={title} borderRadius="3xl" />
+          </Link>
         </Card.Header>
         <Card.Body>
           <HStack
