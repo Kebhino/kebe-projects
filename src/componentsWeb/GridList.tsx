@@ -3,7 +3,11 @@ import ProjectCard from "./ProjectCard";
 
 const GridList = () => {
   return (
-    <Grid templateColumns="repeat(3, 1fr)" gap={6} padding={4}>
+    <Grid
+      templateColumns={{ base: "1fr", lg: "repeat(3, 1fr)" }}
+      gap={6}
+      padding={4}
+    >
       <GridItem>
         <ProjectCard
           title="Snake Game - React TS"

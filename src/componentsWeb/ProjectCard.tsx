@@ -12,7 +12,7 @@ import {
 import { FaReact } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
-import { CertificatesList } from "./certyfikaty";
+import { CertificatesList } from "../data/certyfikaty";
 
 interface ProjectCardProps {
   title: string;
