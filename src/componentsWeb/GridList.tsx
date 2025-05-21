@@ -1,4 +1,4 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
 
 const GridList = () => {
