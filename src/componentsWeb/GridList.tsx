@@ -4,18 +4,21 @@ import ProjectCard from "./ProjectCard";
 const GridList = () => {
   return (
     <Grid
-      templateColumns={{ base: "1fr", md: "1fr", lg: "repeat(3, 1fr)" }}
+      templateColumns={{
+        base: "1fr",
+        md: "repeat(2, 1fr)",
+        lg: "repeat(3, 1fr)",
+        xl: "repeat(3, 1fr)",
+      }}
       gap={6}
       padding={4}
     >
       <ProjectCard
-        title="Snake Game - React TS"
-        description=" Gra przeglądarkowa napisana w React i TypeScript. Gra polega na
-                    zbieraniu jabłek i unikaniu przeszkód. Gra kończy się, gdy wąż
-                    uderzy w siebie"
-        urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/snakeimg_optimized.webp"
-        git="https://github.com/Kebhino/snake-game"
-        urlSite="https://snake.kebeprojects.com	"
+        title="Portfolio - React TS"
+        description="My personal portfolio website built with React and TypeScript, showcasing my projects and skills.You can find the source code on GitHub."
+        urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/programmer_portfolio_small.webp"
+        urlSite="https://kebeprojects.com"
+        git="https://github.com/Kebhino/kebe-projects"
       />
 
       <ProjectCard
@@ -25,6 +28,15 @@ const GridList = () => {
         urlSite="https://gamehub.kebeprojects.com"
         git="https://github.com/Kebhino/game-hub"
       />
+      <ProjectCard
+        title="Snake Game - React TS"
+        description=" Gra przeglądarkowa napisana w React i TypeScript. Gra polega na
+          zbieraniu jabłek i unikaniu przeszkód. Gra kończy się, gdy wąż
+          uderzy w siebie"
+        urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/snakeimg_optimized.webp"
+        git="https://github.com/Kebhino/snake-game"
+        urlSite="https://snake.kebeprojects.com	"
+      />
 
       <ProjectCard
         title="Certificates"
@@ -33,14 +45,6 @@ const GridList = () => {
         urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/certificate_card.webp"
         urlSite="https://github.com/Kebhino/Certificates"
         git="https://github.com/Kebhino/Certificates"
-      />
-
-      <ProjectCard
-        title="Portfolio - React TS"
-        description="My personal portfolio website built with React and TypeScript, showcasing my projects and skills.You can find the source code on GitHub."
-        urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/programmer_portfolio_small.webp"
-        urlSite="https://kebeprojects.com"
-        git="https://github.com/Kebhino/kebe-projects"
       />
     </Grid>
   );
