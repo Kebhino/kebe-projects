@@ -8,8 +8,8 @@ interface Certyfikat {
 import { useQueryClient } from "@tanstack/react-query";
 
 const CertificatesMenu = () => {
-  const queryClient = useQueryClient();
-  const projects = queryClient.getQueryData<Certyfikat[]>(["projects"]);
+  const queryClient = useQueryClient(); // Inicjalizuję QueryClient
+  const projects = queryClient.getQueryData<Certyfikat[]>(["projects"]); // Pobieram dane z cache
 
   return (
     <Menu.Root>
