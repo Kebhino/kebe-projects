@@ -7,14 +7,12 @@ import {
   Icon,
   Image,
   Link,
-  Menu,
   Spacer,
   Text,
 } from "@chakra-ui/react";
 import { FaReact } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
-import { CertificatesList } from "../data/certyfikaty";
 
 interface ProjectCardProps {
   title: string;
@@ -90,41 +88,6 @@ const ProjectCard = ({
             position="relative"
             overflow="visible"
           >
-            {/* {id === "certificates" ? (
-              <Menu.Root>
-                <Menu.Trigger asChild>
-                  <Button borderRadius="xl" colorPalette="teal" variant="solid">
-                    Certyfikaty
-                  </Button>
-                </Menu.Trigger>
-                <Menu.Content
-                  minWidth="200px"
-                  zIndex={9999}
-                  style={{
-                    position: "absolute",
-                    top: "100%",
-                    right: 0,
-                    marginTop: "8px", // ładny odstęp od przycisku
-                    borderRadius: "8px",
-                    boxShadow: "md",
-                    padding: "4px 0",
-                  }}
-                >
-                  {CertificatesList.map((certyfikat) => (
-                    <Menu.Item
-                      asChild
-                      value={certyfikat.tittle}
-                      zIndex="popover"
-                      style={{ overflow: "visible" }}
-                    >
-                      <a href={certyfikat.urlPDF} target="_blank">
-                        {certyfikat.tittle}
-                      </a>
-                    </Menu.Item>
-                  ))}
-                </Menu.Content>
-              </Menu.Root>
-            ) : ( */}
             <Button
               id={id}
               borderRadius="xl"

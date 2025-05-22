@@ -5,6 +5,7 @@ import ColorModeSwitch from "./hooks/useColorMode";
 import { HStack, Spacer } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
 import CertyficatesGridList from "./pages/CertyficatesGridList";
+import CertificatesMenu from "./componentsWeb/CertificatesMenu";
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
         path="/certificates"
         element={
           <>
-            <HStack>
+            <HStack overflow="visible" position="relative" marginLeft={5}>
+              <CertificatesMenu />
               <Spacer />
               <ColorModeSwitch />
             </HStack>
