@@ -1,7 +1,6 @@
-import { Box, Grid } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
 import Cards from "../data/projects";
-import { Link } from "react-router-dom";
 
 const GridList = () => {
   return (
@@ -28,9 +27,6 @@ const GridList = () => {
           />
         ))}
       </Grid>
-      <Link to="/snakegame">
-        <Box>Snake Game</Box>
-      </Link>
     </>
   );
 };
