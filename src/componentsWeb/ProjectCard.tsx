@@ -13,6 +13,7 @@ import {
 import { FaReact } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
+import { SiHtml5 } from "react-icons/si";
 
 interface ProjectCardProps {
   title: string;
@@ -69,14 +70,19 @@ const ProjectCard = ({
                 {title}
               </Text>
               <Spacer />
-              <Icon as={FaReact} color="#61DAFB" boxSize={5} />
+              {id === "certificat" ? null : (
+                // (<Icon as={SiHtml5} color="#E34F26" boxSize={5} />)
+                <>
+                  <Icon as={FaReact} color="#61DAFB" boxSize={5} />
 
-              <Icon
-                as={SiTypescript}
-                color="#3178C6"
-                boxSize={5}
-                borderRadius={2}
-              />
+                  <Icon
+                    as={SiTypescript}
+                    color="#3178C6"
+                    boxSize={5}
+                    borderRadius={2}
+                  />
+                </>
+              )}
             </HStack>
 
             <Text fontSize="sm" color="gray.500">
@@ -104,15 +110,16 @@ const ProjectCard = ({
             </Button>
 
             <Spacer />
-
-            <Icon
-              as={"a"}
-              href={git}
-              _hover={{ transform: "scale(1.1)" }}
-              transition="all 0.2s ease"
-            >
-              <FaGithub size={40} />
-            </Icon>
+            {id === "certificat" ? null : (
+              <Icon
+                as={"a"}
+                href={git}
+                _hover={{ transform: "scale(1.1)" }}
+                transition="all 0.2s ease"
+              >
+                <FaGithub size={40} />
+              </Icon>
+            )}
           </Card.Footer>
         </Card.Root>
       </Box>
