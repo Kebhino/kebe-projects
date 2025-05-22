@@ -1,28 +1,27 @@
 import { Grid } from "@chakra-ui/react";
-import ProjectCard from "@/componentsWeb/ProjectCard";
+import ProjectCard from "./ProjectCard";
 import { useQuery } from "@tanstack/react-query";
 
-interface Certificate {
-  tittle: string;
+interface ProjectCardProps {
+  title: string;
   description: string;
   urlImage: string;
-  urlPDF: string;
-  id: string;
+  git?: string;
+  urlSite: string;
+  id?: string;
 }
 
-const CertyficatesGridList = () => {
+const GridList = () => {
   const {
     data = [],
     isLoading,
     isError,
-  } = useQuery<Certificate[]>({
-    queryKey: ["certificates"],
+  } = useQuery<ProjectCardProps[]>({
+    queryKey: ["projects"],
     queryFn: () =>
       fetch(
-        "https://projectkebedb.s3.eu-central-1.amazonaws.com/data/certyfikaty.json"
-      )
-        .then((res) => res.json())
-        .then(),
+        "https://projectkebedb.s3.eu-central-1.amazonaws.com/data/projects.json"
+      ).then((res) => res.json()),
     refetchOnWindowFocus: false,
     refetchOnReconnect: false,
     refetchOnMount: false,
@@ -31,6 +30,7 @@ const CertyficatesGridList = () => {
 
   if (isLoading) return <p>Ładowanie...</p>;
   if (isError) return <p>Błąd podczas pobierania danych</p>;
+
   return (
     <>
       <Grid
@@ -43,15 +43,15 @@ const CertyficatesGridList = () => {
         gap={6}
         padding={4}
       >
-        {}
-        {data.map((certificat, index) => (
+        {data.map((project, index) => (
           <ProjectCard
-            title={certificat.tittle}
-            description={certificat.description}
-            urlImage={certificat.urlImage}
-            urlSite={certificat.urlPDF}
+            title={project.title}
+            description={project.description}
+            urlImage={project.urlImage}
+            urlSite={project.urlSite}
+            git={project.git}
             key={index}
-            id={certificat.id}
+            id={project.id}
           />
         ))}
       </Grid>
@@ -59,4 +59,4 @@ const CertyficatesGridList = () => {
   );
 };
 
-export default CertyficatesGridList;
+export default GridList;
