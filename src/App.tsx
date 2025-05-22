@@ -4,7 +4,7 @@ import Footer from "./componentsWeb/Footer";
 import ColorModeSwitch from "./hooks/useColorMode";
 import { HStack, Spacer } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
-import SnakeGame from "./pages/SnakeGame";
+import CertyficatesGridList from "./pages/CertyficatesGridList";
 
 function App() {
   return (
@@ -26,14 +26,14 @@ function App() {
 
       {/* Podstrona SnakeGame */}
       <Route
-        path="/snakegame"
+        path="/certificates"
         element={
           <>
             <HStack>
               <Spacer />
               <ColorModeSwitch />
             </HStack>
-            <SnakeGame />
+            <CertyficatesGridList />
             <Footer />
           </>
         }

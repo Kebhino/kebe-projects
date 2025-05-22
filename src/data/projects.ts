@@ -1,4 +1,4 @@
-interface Card {
+export interface Project {
     title: string;
     description: string;
     urlImage: string;
@@ -8,7 +8,7 @@ interface Card {
 }
 
 
-const Cards: Card[] = [
+const Projects: Project[] = [
     {
         title: "Portfolio - React TS",
         description: "My personal portfolio website built with React and TypeScript, showcasing my projects and skills. You can find the source code on GitHub. Enjoy!",
@@ -41,4 +41,4 @@ const Cards: Card[] = [
 
 ]
 
-    export default Cards;
+    export default Projects;

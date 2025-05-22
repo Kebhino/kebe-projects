@@ -51,7 +51,7 @@ const ProjectCard = ({
           size={"lg"}
         >
           <Card.Header>
-            <Link href={urlSite} target="_blank" focusRing={"none"}>
+            <Link href={urlSite} target="_blank" focusRing={"none"} padding={0}>
               <Image src={urlImage} alt={title} borderRadius="3xl" />
             </Link>
           </Card.Header>
@@ -90,7 +90,7 @@ const ProjectCard = ({
             position="relative"
             overflow="visible"
           >
-            {id === "certificates" ? (
+            {/* {id === "certificates" ? (
               <Menu.Root>
                 <Menu.Trigger asChild>
                   <Button borderRadius="xl" colorPalette="teal" variant="solid">
@@ -113,31 +113,32 @@ const ProjectCard = ({
                   {CertificatesList.map((certyfikat) => (
                     <Menu.Item
                       asChild
-                      value={certyfikat.name}
+                      value={certyfikat.tittle}
                       zIndex="popover"
                       style={{ overflow: "visible" }}
                     >
-                      <a href={certyfikat.url} target="_blank">
-                        {certyfikat.name}
+                      <a href={certyfikat.urlPDF} target="_blank">
+                        {certyfikat.tittle}
                       </a>
                     </Menu.Item>
                   ))}
                 </Menu.Content>
               </Menu.Root>
-            ) : (
-              <Button
-                id={id}
-                borderRadius="xl"
-                asChild
-                colorPalette="teal"
-                variant="solid"
-                justifyContent="center"
-                _hover={{ transform: "scale(1.1)" }}
-                transition="all 0.4s ease"
-              >
-                <a href={urlSite}>Zobacz</a>
-              </Button>
-            )}
+            ) : ( */}
+            <Button
+              id={id}
+              borderRadius="xl"
+              asChild
+              colorPalette="teal"
+              variant="solid"
+              justifyContent="center"
+              _hover={{ transform: "scale(1.1)" }}
+              transition="all 0.4s ease"
+            >
+              <a href={id === "certificates" ? "/certificates" : urlSite}>
+                {id === "certificat" ? "PDF" : "Zobacz"}
+              </a>
+            </Button>
 
             <Spacer />
 
