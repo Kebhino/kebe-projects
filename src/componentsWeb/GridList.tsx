@@ -3,8 +3,6 @@ import ProjectCard from "./ProjectCard";
 import Cards from "../data/projects";
 import { Link } from "react-router-dom";
 
-// console.log(Cards);
-
 const GridList = () => {
   return (
     <>

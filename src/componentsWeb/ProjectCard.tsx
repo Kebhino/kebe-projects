@@ -13,7 +13,7 @@ import {
 import { FaReact } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
-import { SiHtml5 } from "react-icons/si";
+// import { SiHtml5 } from "react-icons/si";
 
 interface ProjectCardProps {
   title: string;
