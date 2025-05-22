@@ -1,7 +1,16 @@
-import { CertificatesList } from "@/data/certyfikaty";
 import { Menu, Button } from "@chakra-ui/react";
 
+interface Certyfikat {
+  tittle: string;
+  urlPDF: string;
+}
+
+import { useQueryClient } from "@tanstack/react-query";
+
 const CertificatesMenu = () => {
+  const queryClient = useQueryClient();
+  const projects = queryClient.getQueryData<Certyfikat[]>(["projects"]);
+
   return (
     <Menu.Root>
       <Menu.Trigger asChild>
@@ -22,7 +31,7 @@ const CertificatesMenu = () => {
           padding: "4px 0",
         }}
       >
-        {CertificatesList.map((certyfikat) => (
+        {projects?.map((certyfikat: Certyfikat) => (
           <Menu.Item
             asChild
             value={certyfikat.tittle}
