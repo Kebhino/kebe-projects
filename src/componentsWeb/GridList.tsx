@@ -1,5 +1,8 @@
 import { Grid } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
+import Cards from "../data/cards";
+
+// console.log(Cards);
 
 const GridList = () => {
   return (
@@ -13,39 +16,17 @@ const GridList = () => {
       gap={6}
       padding={4}
     >
-      <ProjectCard
-        title="Portfolio - React TS"
-        description="My personal portfolio website built with React and TypeScript, showcasing my projects and skills.You can find the source code on GitHub."
-        urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/programmer_portfolio_small.webp"
-        urlSite="https://kebeprojects.com"
-        git="https://github.com/Kebhino/kebe-projects"
-      />
-
-      <ProjectCard
-        title="Game-Hub - React TS"
-        description=" A dynamic web app built with React, TypeScript, and Chakra UI that allows users to browse video games fetched from the RAWG Video Games Database API."
-        urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/gamehub.webp"
-        urlSite="https://gamehub.kebeprojects.com"
-        git="https://github.com/Kebhino/game-hub"
-      />
-      <ProjectCard
-        title="Snake Game - React TS"
-        description=" Gra przeglądarkowa napisana w React i TypeScript. Gra polega na
-          zbieraniu jabłek i unikaniu przeszkód. Gra kończy się, gdy wąż
-          uderzy w siebie"
-        urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/snakeimg_optimized.webp"
-        git="https://github.com/Kebhino/snake-game"
-        urlSite="https://snake.kebeprojects.com	"
-      />
-
-      <ProjectCard
-        title="Certificates"
-        id="certificates"
-        description=" Here you'll find the most important courses I’ve completed, grouped by topic and with direct access to each certificate. You can also download them in PDF format."
-        urlImage="https://snakegame-assets.s3.eu-north-1.amazonaws.com/certificate_card.webp"
-        urlSite="https://github.com/Kebhino/Certificates"
-        git="https://github.com/Kebhino/Certificates"
-      />
+      {Cards.map((project, index) => (
+        <ProjectCard
+          title={project.title}
+          description={project.description}
+          urlImage={project.urlImage}
+          urlSite={project.urlSite}
+          git={project.git}
+          key={index}
+          id={project.id}
+        />
+      ))}
     </Grid>
   );
 };
