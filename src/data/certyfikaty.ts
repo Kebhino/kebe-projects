@@ -24,8 +24,14 @@ export const CertificatesList: { name: string; url: string }[] = [
       url: "https://snakegame-assets.s3.eu-north-1.amazonaws.com/Certificates/certificate-of-completion-for-object-oriented-programming-in-javascript.pdf",
     },
     {
+     name: "The Ultimate TypeScript Course",
+     url: "https://snakegame-assets.s3.eu-north-1.amazonaws.com/Certificates/The-ultimate-type-script-course.pdf",
+   },
+    {
       name: "React 18 for Beginners",
       url: "https://snakegame-assets.s3.eu-north-1.amazonaws.com/Certificates/the-ultimate-html-course-psd-to-html-part-3.pdf",
     },
+
+     
   ];
 
