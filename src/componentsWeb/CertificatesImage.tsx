@@ -6,6 +6,7 @@ import {
   ModalOverlay,
 } from "@chakra-ui/modal";
 import { useDisclosure, Image, Center } from "@chakra-ui/react";
+import { use } from "react";
 
 interface CertificateImageProps {
   src: string;
@@ -14,6 +15,8 @@ interface CertificateImageProps {
 
 const CertificateImage = ({ src, alt }: CertificateImageProps) => {
   const { open, onOpen, onClose } = useDisclosure();
+  const test = useDisclosure();
+  console.log(test);
 
   return (
     <>
@@ -30,9 +33,18 @@ const CertificateImage = ({ src, alt }: CertificateImageProps) => {
         />
       </Center>
 
-      <Modal isOpen={open} onClose={onClose} size="xl" isCentered>
+      <Modal
+        onOverlayClick={onClose}
+        isOpen={open}
+        closeOnEsc={true}
+        onClose={onClose}
+        size="xl"
+        isCentered
+        closeOnOverlayClick={true}
+      >
         <ModalOverlay />
         <ModalContent
+          onClick={onClose}
           boxShadow="none"
           outline="none"
           _focus={{ outline: "none", boxShadow: "none" }}
@@ -55,7 +67,6 @@ const CertificateImage = ({ src, alt }: CertificateImageProps) => {
               tabIndex={-1}
               outline="none"
               draggable={false}
-              _focus={{ outline: "none", boxShadow: "none" }}
             />
           </ModalBody>
         </ModalContent>
