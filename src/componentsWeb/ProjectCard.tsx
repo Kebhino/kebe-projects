@@ -13,6 +13,7 @@ import {
 import { FaReact } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
+import CertificateImage from "./CertificatesImage";
 
 // import { SiHtml5 } from "react-icons/si";
 
@@ -52,9 +53,18 @@ const ProjectCard = ({
           zIndex={"tooltip"}
         >
           <Card.Header>
-            <Link href={urlSite} target="_blank" focusRing={"none"} padding={0}>
-              <Image src={urlImage} alt={title} borderRadius="3xl" />
-            </Link>
+            {id !== "certificat" ? (
+              <Link
+                href={urlSite}
+                target="_blank"
+                focusRing={"none"}
+                padding={0}
+              >
+                <Image src={urlImage} alt={title} borderRadius="3xl" />
+              </Link>
+            ) : (
+              <CertificateImage src={urlImage} alt={title} />
+            )}
           </Card.Header>
           <Card.Body>
             <HStack

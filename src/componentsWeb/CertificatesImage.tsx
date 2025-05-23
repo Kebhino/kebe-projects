@@ -1,5 +1,11 @@
-import { Modal, ModalBody, ModalContent, ModalOverlay } from "@chakra-ui/modal";
-import { useDisclosure, Image } from "@chakra-ui/react";
+import {
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalOverlay,
+} from "@chakra-ui/modal";
+import { useDisclosure, Image, Center } from "@chakra-ui/react";
 
 interface CertificateImageProps {
   src: string;
@@ -11,20 +17,34 @@ const CertificateImage = ({ src, alt }: CertificateImageProps) => {
 
   return (
     <>
-      <Image
-        src={src}
-        alt={alt}
-        boxSize="200px"
-        objectFit="cover"
-        cursor="pointer"
-        borderRadius="md"
-        onClick={onOpen}
-        _hover={{ opacity: 0.8 }}
-      />
+      <Center padding={0}>
+        <Image
+          focusRing={"none"}
+          src={src}
+          alt={alt}
+          boxSize="200px"
+          objectFit="cover"
+          borderRadius="md"
+          onClick={onOpen}
+          _hover={{ opacity: 1.2 }}
+        />
+      </Center>
 
       <Modal isOpen={open} onClose={onClose} size="xl" isCentered>
         <ModalOverlay />
-        <ModalContent bg="transparent" boxShadow="none" maxW="90vw">
+        <ModalContent
+          boxShadow="none"
+          outline="none"
+          _focus={{ outline: "none", boxShadow: "none" }}
+          tabIndex={-1}
+          position="relative"
+        >
+          <ModalCloseButton
+            color={"gray"}
+            top={10}
+            right={10}
+            position="absolute"
+          />
           <ModalBody p={0}>
             <Image
               src={src}
@@ -32,6 +52,10 @@ const CertificateImage = ({ src, alt }: CertificateImageProps) => {
               borderRadius="md"
               maxH="80vh"
               mx="auto"
+              tabIndex={-1}
+              outline="none"
+              draggable={false}
+              _focus={{ outline: "none", boxShadow: "none" }}
             />
           </ModalBody>
         </ModalContent>

@@ -20,9 +20,7 @@ const CertyficatesGridList = () => {
     queryFn: () =>
       fetch(
         "https://projectkebedb.s3.eu-central-1.amazonaws.com/data/certyfikaty.json"
-      )
-        .then((res) => res.json())
-        .then(),
+      ).then((res) => res.json()),
     refetchOnWindowFocus: false,
     refetchOnReconnect: false,
     refetchOnMount: false,
