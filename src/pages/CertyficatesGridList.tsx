@@ -1,4 +1,4 @@
-import { Grid } from "@chakra-ui/react";
+import { Grid, Spinner } from "@chakra-ui/react";
 import ProjectCard from "@/componentsWeb/ProjectCard";
 import { useQuery } from "@tanstack/react-query";
 
@@ -29,7 +29,7 @@ const CertyficatesGridList = () => {
     staleTime: 1000 * 60 * 60,
   });
 
-  if (isLoading) return <p>Ładowanie...</p>;
+  if (isLoading) return <Spinner size="xl" />;
   if (isError) return <p>Błąd podczas pobierania danych</p>;
   return (
     <>

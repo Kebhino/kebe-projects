@@ -28,7 +28,7 @@ const CertificatesMenu = () => {
           borderRadius="md"
           boxShadow="md"
           p="1"
-          zIndex={"popover"}
+          zIndex={9999}
           border={"1px solid white"}
         >
           {projects?.map((certyfikat: Certyfikat, index) => (
