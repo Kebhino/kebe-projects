@@ -6,7 +6,6 @@ import {
   ModalOverlay,
 } from "@chakra-ui/modal";
 import { useDisclosure, Image, Center } from "@chakra-ui/react";
-import { use } from "react";
 
 interface CertificateImageProps {
   src: string;
