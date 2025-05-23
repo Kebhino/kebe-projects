@@ -49,6 +49,7 @@ const ProjectCard = ({
           boxShadow="xl"
           colorPalette={"red"}
           size={"lg"}
+          zIndex={"tooltip"}
         >
           <Card.Header>
             <Link href={urlSite} target="_blank" focusRing={"none"} padding={0}>

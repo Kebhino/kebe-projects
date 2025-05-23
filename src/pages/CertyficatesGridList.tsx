@@ -42,6 +42,8 @@ const CertyficatesGridList = () => {
         }}
         gap={6}
         padding={4}
+        position="relative"
+        zIndex={"base"}
       >
         {}
         {data.map((certificat, index) => (
