@@ -110,7 +110,7 @@ const ProjectCard = ({
               id={id}
               borderRadius="xl"
               asChild
-              colorPalette="teal"
+              colorPalette={id === "certificat" ? "red" : "teal"}
               variant="solid"
               justifyContent="center"
               _hover={{ transform: "scale(1.1)" }}

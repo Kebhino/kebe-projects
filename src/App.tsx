@@ -6,6 +6,7 @@ import { HStack, Spacer } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
 import CertyficatesGridList from "./pages/CertyficatesGridList";
 import CertificatesMenu from "./componentsWeb/CertificatesMenu";
+import MainSiteButton from "./componentsWeb/MainSiteButton";
 
 function App() {
   return (
@@ -31,8 +32,10 @@ function App() {
         element={
           <>
             <HStack overflow="visible" position="relative" marginLeft={5}>
-              <CertificatesMenu />
+              <MainSiteButton />
               <Spacer />
+              <CertificatesMenu />
+
               <ColorModeSwitch />
             </HStack>
             <CertyficatesGridList />
