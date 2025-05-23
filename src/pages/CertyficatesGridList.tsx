@@ -1,4 +1,4 @@
-import { Grid, Spinner } from "@chakra-ui/react";
+import { Grid, Spinner, Text } from "@chakra-ui/react";
 import ProjectCard from "@/componentsWeb/ProjectCard";
 import { useQuery } from "@tanstack/react-query";
 
@@ -30,7 +30,8 @@ const CertyficatesGridList = () => {
   });
 
   if (isLoading) return <Spinner size="xl" />;
-  if (isError) return <p>Błąd podczas pobierania danych</p>;
+  if (isError)
+    return <Text color="red.500">Błąd podczas ładowania certyfikatów.</Text>;
   return (
     <>
       <Grid
@@ -43,7 +44,7 @@ const CertyficatesGridList = () => {
         gap={6}
         padding={4}
         position="relative"
-        zIndex={"base"}
+        zIndex={0}
       >
         {}
         {data.map((certificat, index) => (
