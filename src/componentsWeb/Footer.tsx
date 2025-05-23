@@ -24,7 +24,7 @@ const Footer = () => {
           </Text>
 
           <Stack direction="row" gap={3}>
-            <Link href="https://github.com">
+            <Link href="https://github.com/Kebhino">
               <IconButton
                 aria-label="GitHub"
                 variant="ghost"
@@ -33,7 +33,7 @@ const Footer = () => {
                 <FaGithub />
               </IconButton>
             </Link>
-            <Link href="https://linkedin.com">
+            <Link href="https://www.linkedin.com/in/jakub-wr%C3%B3bel-932440367/">
               <IconButton
                 aria-label="LinkedIn"
                 variant="ghost"
