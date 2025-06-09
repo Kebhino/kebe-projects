@@ -23,6 +23,13 @@
         "git": "https://github.com/Kebhino/snake-game"
     }, 
     {
+        "title": "InstaCode - React TS Chakra UI",
+        "description": "A modern business website built to present the InstaCode brand — including service offerings, key sectors, and contact details. Built with Chakra UI, React, and TypeScript. Features responsive design, smooth animations, and a clean user experience.",
+        "urlImage": "https://snakegame-assets.s3.eu-north-1.amazonaws.com/imageInstaCodeProject.webp",
+        "urlSite": "https://instacode.pl",
+        "git": "https://github.com/Kebhino/instacode-project"
+    },
+    {
         "title": "Certificates",
         "id": "certificates",
         "description": " Here you'll find the most important courses I’ve completed, grouped by topic and with direct access to each certificate. You can also download them in PDF format.",
