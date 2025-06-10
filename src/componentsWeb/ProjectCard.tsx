@@ -66,6 +66,8 @@ const ProjectCard = ({
                 <Image
                   src={urlImage}
                   alt={title}
+                  width="320px"
+                  height="320px"
                   borderRadius="3xl"
                   loading="eager"
                   fetchPriority="high"
