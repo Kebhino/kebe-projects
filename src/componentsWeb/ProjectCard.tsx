@@ -63,7 +63,13 @@ const ProjectCard = ({
                 focusRing={"none"}
                 padding={0}
               >
-                <Image src={urlImage} alt={title} borderRadius="3xl" />
+                <Image
+                  src={urlImage}
+                  alt={title}
+                  borderRadius="3xl"
+                  loading="eager"
+                  fetchPriority="high"
+                />
               </Link>
             ) : (
               <CertificateImage src={urlImage} alt={title} />
