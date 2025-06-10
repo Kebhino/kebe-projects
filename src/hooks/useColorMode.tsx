@@ -12,8 +12,10 @@ const ColorModeSwitch = () => {
         size="sm"
         marginRight={4}
         borderRadius={"xl"}
+        p={3}
       >
         {colorMode === "light" ? <LuSun /> : <LuMoon />}
+        {colorMode === "light" ? "Dark Mode" : "Light Mode"}
       </IconButton>
     </ClientOnly>
   );
