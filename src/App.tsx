@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import CertyficatesGridList from "./pages/CertyficatesGridList";
 import CertificatesMenu from "./componentsWeb/CertificatesMenu";
 import MainSiteButton from "./componentsWeb/MainSiteButton";
+// import AddProjectForm from "./componentsWeb/AddProjectForm";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             </HStack>
             <GridList />
             <Footer />
+            {/* <AddProjectForm /> */}
           </>
         }
       />

@@ -7,7 +7,6 @@ import {
   Icon,
   Image,
   Link,
-  Spacer,
   Text,
 } from "@chakra-ui/react";
 import { FaReact } from "react-icons/fa";
@@ -68,7 +67,7 @@ const ProjectCard = ({
           </Card.Header>
           <Card.Body>
             <HStack
-              justifyContent={"space-between"}
+              justifyContent={"Center"}
               marginBottom={2}
               alignItems={"center"}
             >
@@ -81,20 +80,6 @@ const ProjectCard = ({
               >
                 {title}
               </Text>
-              <Spacer />
-              {id === "certificat" ? null : (
-                // (<Icon as={SiHtml5} color="#E34F26" boxSize={5} />)
-                <>
-                  <Icon as={FaReact} color="#61DAFB" boxSize={5} />
-
-                  <Icon
-                    as={SiTypescript}
-                    color="#3178C6"
-                    boxSize={5}
-                    borderRadius={2}
-                  />
-                </>
-              )}
             </HStack>
 
             <Text fontSize="sm" color="gray.500">
@@ -106,32 +91,49 @@ const ProjectCard = ({
             position="relative"
             overflow="visible"
           >
-            <Button
-              id={id}
-              borderRadius="xl"
-              asChild
-              colorPalette={id === "certificat" ? "red" : "teal"}
-              variant="solid"
-              justifyContent="center"
-              _hover={{ transform: "scale(1.1)" }}
-              transition="all 0.4s ease"
-            >
-              <a href={id === "certificates" ? "/certificates" : urlSite}>
-                {id === "certificat" ? "PDF" : "Zobacz"}
-              </a>
-            </Button>
-
-            <Spacer />
-            {id === "certificat" ? null : (
-              <Icon
-                as={"a"}
-                href={git}
+            <Box>
+              <Button
+                id={id}
+                borderRadius="xl"
+                asChild
+                colorPalette={id === "certificat" ? "red" : "teal"}
+                variant="solid"
+                justifyContent="center"
                 _hover={{ transform: "scale(1.1)" }}
-                transition="all 0.2s ease"
+                transition="all 0.4s ease"
               >
-                <FaGithub size={40} />
-              </Icon>
-            )}
+                <a href={id === "certificates" ? "/certificates" : urlSite}>
+                  {id === "certificat" ? "PDF" : "Zobacz"}
+                </a>
+              </Button>
+            </Box>
+
+            <Box>
+              {id === "certificat" ? null : (
+                // (<Icon as={SiHtml5} color="#E34F26" boxSize={5} />)
+                <>
+                  <Icon as={FaReact} color="#61DAFB" boxSize={5} mr={3} />
+                  <Icon
+                    as={SiTypescript}
+                    color="#3178C6"
+                    boxSize={5}
+                    borderRadius={2}
+                  />
+                </>
+              )}
+            </Box>
+            <Box>
+              {id === "certificat" ? null : (
+                <Icon
+                  as={"a"}
+                  href={git}
+                  _hover={{ transform: "scale(1.1)" }}
+                  transition="all 0.2s ease"
+                >
+                  <FaGithub size={40} />
+                </Icon>
+              )}
+            </Box>
           </Card.Footer>
         </Card.Root>
       </Box>
