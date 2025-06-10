@@ -1,9 +1,8 @@
 import { Grid } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
-import { useQuery } from "@tanstack/react-query";
 
 // 🔽 Lokalny JSON
-import localProjects from "@/data/projects.json";
+import localProjects from "@/data/projects.ts";
 
 interface ProjectCardProps {
   title: string;
@@ -15,27 +14,7 @@ interface ProjectCardProps {
 }
 
 const GridList = () => {
-  const {
-    data = [],
-    isLoading,
-    isError,
-  } = useQuery<ProjectCardProps[]>({
-    queryKey: ["projects"],
-    queryFn: import.meta.env.DEV
-      ? () => Promise.resolve(localProjects)
-      : () =>
-          fetch(
-            "https://projectkebedb.s3.eu-central-1.amazonaws.com/data/projects.json"
-          ).then((res) => res.json()),
-    refetchOnWindowFocus: false,
-    refetchOnReconnect: false,
-    refetchOnMount: false,
-    staleTime: 1000 * 60 * 60,
-  });
-
-  if (isLoading) return <p>Ładowanie...</p>;
-  if (isError) return <p>Błąd podczas pobierania danych</p>;
-
+  const projects: ProjectCardProps[] = localProjects;
   return (
     <Grid
       templateColumns={{
@@ -47,7 +26,7 @@ const GridList = () => {
       gap={6}
       padding={4}
     >
-      {data.map((project, index) => (
+      {projects.map((project, index) => (
         <ProjectCard
           title={project.title}
           description={project.description}
