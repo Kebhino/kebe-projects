@@ -1,54 +1,73 @@
-# React + TypeScript + Vite
+# KeBe Projects
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌐 [kebeprojects.com](https://kebeprojects.com)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🇵🇱 O projekcie
 
-## Expanding the ESLint configuration
+**KeBe Projects** to moje osobiste portfolio — miejsce, w którym prezentuję projekty stworzone podczas nauki programowania. Strona zawiera interaktywne podglądy aplikacji, które stworzyłem, ucząc się takich technologii jak React, Chakra UI czy AWS.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🔧 Technologie:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- React + JavaScript
+- Chakra UI (UI komponenty)
+- HTML + CSS
+- React Query (obsługa danych)
+- Vite (dev server + build tool)
+- AWS (hostowanie, domena, zarządzanie)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🧭 Funkcje:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Katalog projektów z interaktywnymi linkami
+- Oparte na komponentach, nowoczesne UI
+- Strona w pełni responsywna
+- Hosting w chmurze (AWS)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🇬🇧 About the project
+
+**KeBe Projects** is my personal developer portfolio – a space to showcase the projects I've built while learning programming. The website includes interactive previews of applications created with technologies like React, Chakra UI, and AWS.
+
+### 🔧 Tech stack:
+
+- React + JavaScript
+- Chakra UI (UI component library)
+- HTML + CSS
+- React Query (data handling)
+- Vite (fast dev/build tool)
+- AWS (hosting, domain, infrastructure)
+
+### 🧭 Features:
+
+- Interactive project gallery
+- Modern, component-based UI
+- Fully responsive design
+- Cloud hosting (AWS)
+
+---
+
+## 📌 Demo
+
+🔗 [kebeprojects.com](https://kebeprojects.com)
+
+---
+
+## 📅 Plany / Roadmap
+
+- [ ] Dodanie bloga lub CMS
+- [x] Wersja ciemna (dark mode)
+- [x] Animacje i mikrointerakcje
+- [ ] Formularz kontaktowy
+- [ ] Panel Nawigacyjny
+- [ ] Panel do dodawania projektów ze strony widoczny po zalogowaniu.
+
+---
+
+## 📄 Licencja / License
+
+Kod źródłowy dostępny do wglądu w celach edukacyjnych.  
+Source code is publicly visible for educational purposes.
+
+Wszelkie prawa zastrzeżone / All rights reserved © KeBe 2025
