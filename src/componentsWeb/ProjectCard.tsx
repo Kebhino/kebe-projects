@@ -14,6 +14,7 @@ import { FaReact } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import CertificateImage from "./CertificatesImage";
+import { useColorMode } from "@/components/ui/color-mode";
 
 // import { SiHtml5 } from "react-icons/si";
 
@@ -34,6 +35,8 @@ const ProjectCard = ({
   git,
   id,
 }: ProjectCardProps) => {
+  const { colorMode } = useColorMode();
+
   return (
     <GridItem>
       <Box
@@ -123,14 +126,19 @@ const ProjectCard = ({
 
             <Spacer />
             {id === "certificat" ? null : (
-              <Icon
-                as={"a"}
+              <Link
                 href={git}
+                target="_blank"
+                aria-label={`Zobacz projekt ${title} na GitHub`}
                 _hover={{ transform: "scale(1.1)" }}
                 transition="all 0.2s ease"
               >
-                <FaGithub size={40} />
-              </Icon>
+                <Icon
+                  as={FaGithub}
+                  boxSize={10}
+                  color={colorMode === "light" ? "black" : "white"}
+                />
+              </Link>
             )}
           </Card.Footer>
         </Card.Root>
