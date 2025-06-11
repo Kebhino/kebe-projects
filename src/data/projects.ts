@@ -30,7 +30,7 @@ const projects: Project[] = [
   },
   {
     title: "Snake Game - React TS",
-    description: "Gra przeglądarkowa napisana w React i TypeScript. Gra polega na zbieraniu jabłek i unikaniu przeszkód. Gra kończy się, gdy wąż uderzy w siebie",
+    description: "A browser-based game built with React and TypeScript. The objective is to collect apples while avoiding obstacles. The game ends when the snake crashes into itself.",
     urlImage: snakeImg,
     urlSite: "https://snake.kebeprojects.com",
     git: "https://github.com/Kebhino/snake-game"
